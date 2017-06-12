@@ -217,14 +217,12 @@ public class Backgammon extends Application
     {
       borderPane.setRight (null);                       // hide pane
       primaryStage.setWidth (windowWidth - CHAT_WIDTH);
-      //      primaryStage.setX (windowX + CHAT_WIDTH);
       toggleChat.setText ("Show chat");
     }
     else
     {
       borderPane.setRight (chatPane);                   // show pane
       primaryStage.setWidth (windowWidth + CHAT_WIDTH);
-      //      primaryStage.setX (windowX - CHAT_WIDTH);
       toggleChat.setText ("Hide chat");
     }
 
