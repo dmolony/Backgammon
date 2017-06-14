@@ -8,3 +8,10 @@ Networked Backgammon
 ![Initial board](resources/board1.png?raw=true "Initial board")
 #### Possible Moves
 ![Board with moves](resources/board2.png?raw=true "Board with moves")
+#### Commands
+|Key             |Action                                 |
+|----------------|---------------------------------------|
+|X               | Swap dice                             |
+|Space           | Finish move                           |
+|U               | Undo move                             |
+|R               | Redo move                             |
