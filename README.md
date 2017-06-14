@@ -8,6 +8,7 @@ This game can be used by one or two players on a single computer, or by two play
 * Double-click the jar file, or enter 'java -jar Backgammon.jar' in the terminal.
 ### Example Screens
 #### Start Game
+For networked games the first player must start the server and when it is ready the second player can join.
 ![Select game type](resources/start.png?raw=true "Select game type")
 #### Board
 Click on the piece you wish to move. It will move using the currently selected die. To use both dice on the same piece, use shift-click. Undo a move with U, redo a move with R. Swap the order of the dice with X.
