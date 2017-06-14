@@ -15,3 +15,5 @@ Networked Backgammon
 |Space           | Finish move                           |
 |U               | Undo move                             |
 |R               | Redo move                             |
+|P               | Swap player perspective               |
+|B               | Swap board perspective                |
