@@ -1,5 +1,4 @@
 # Backgammon
-Networked Backgammon
 This game can be used by one or two players on a single computer, or by two players over a network. The network can be a local network, or the internet (if port forwarding on 27984 is set up for the server).
 
 ### Installation
