@@ -10,7 +10,7 @@ This game can be used by one or two players on a single computer, or by two play
 For networked games the first player must start the server and when it is ready the second player can join.
 ![Select game type](resources/start.png?raw=true "Select game type")
 #### Board
-Click on the piece you wish to move. It will move using the currently selected die. To use both dice on the same piece, use shift-click. Undo a move with U, redo a move with R. Swap the order of the dice with X.
+Click on the piece you wish to move. It will move using the currently highlighted die. To use both dice on the same piece, use shift-click. Undo a move with U, redo a move with R. Swap the order of the dice with X. Press space to finish the move.
 ![Initial board](resources/board1.png?raw=true "Initial board")
 #### Possible Moves
 Command-M displays all of the possible moves. Click on a move to use it.
