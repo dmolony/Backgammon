@@ -3,7 +3,7 @@ This game can be used by one or two players on a single computer, or by two play
 
 ### Installation
 * Install the **latest** version of the [Java Runtime Environment](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (JRE or JDK).
-* Download Backgammon.jar from the [releases](https://github.com/dmolony/Backgammon/releases) page.
+* Download **Backgammon.jar** from the [releases](https://github.com/dmolony/Backgammon/releases) page.
 * Double-click the jar file, or enter 'java -jar Backgammon.jar' in the terminal.
 ### Example Screens
 #### Start Game
