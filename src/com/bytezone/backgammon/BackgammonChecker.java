@@ -3,16 +3,15 @@ package com.bytezone.backgammon;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sun.javafx.tk.FontLoader;
-
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 
 public class BackgammonChecker implements Checker
 {
-  private static final FontLoader fontLoader =
-      com.sun.javafx.tk.Toolkit.getToolkit ().getFontLoader ();
+  //  private static final FontLoader fontLoader =
+  //      com.sun.javafx.tk.Toolkit.getToolkit ().getFontLoader ();
   private static double radius;
 
   private static Font font18 = Font.font (18);
@@ -109,7 +108,12 @@ public class BackgammonChecker implements Checker
 
     gc.setFill (Color.BLACK);
 
-    float width = fontLoader.computeStringWidth (text, gc.getFont ()) / 2;
+    //    float width = fontLoader.computeStringWidth (text, gc.getFont ()) / 2;
+    final Text ftext = new Text (text);
+    ftext.setFont (gc.getFont ());
+    ftext.applyCss ();
+    float width = (float) ftext.getLayoutBounds ().getWidth () / 2;
+
     gc.fillText (text, x - width, y + offsetY);
   }
 

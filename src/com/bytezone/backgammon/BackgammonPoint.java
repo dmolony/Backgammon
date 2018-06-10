@@ -1,16 +1,15 @@
 package com.bytezone.backgammon;
 
-import com.sun.javafx.tk.FontLoader;
-
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 
 public class BackgammonPoint extends AbstractPoint
 {
   private static Font font = Font.font (12);
-  private static FontLoader fontLoader =
-      com.sun.javafx.tk.Toolkit.getToolkit ().getFontLoader ();
+  //  private static FontLoader fontLoader =
+  //      com.sun.javafx.tk.Toolkit.getToolkit ().getFontLoader ();
 
   protected double[] shapeX = new double[4];
   protected double[] shapeY = new double[4];
@@ -65,7 +64,13 @@ public class BackgammonPoint extends AbstractPoint
 
     // draw point value in the border
     String text = value + "";
-    float width = fontLoader.computeStringWidth (text, font) / 2;
+
+    //    float width = fontLoader.computeStringWidth (text, font) / 2;
+    final Text ftext = new Text (text);
+    ftext.setFont (font);
+    ftext.applyCss ();
+    float width = (float) ftext.getLayoutBounds ().getWidth () / 2;
+
     if (direction == StackDirection.DOWN)
       gc.strokeText (text, shapeX[2] - width, shapeY[0] - 2);
     else

@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Optional;
 
 import com.bytezone.backgammon.Point.StackDirection;
-import com.sun.javafx.tk.FontLoader;
 
 import javafx.beans.InvalidationListener;
 import javafx.scene.canvas.Canvas;
@@ -13,11 +12,12 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 
 public class BackgammonBoard extends Canvas implements Board
 {
-  private static final FontLoader fontLoader =
-      com.sun.javafx.tk.Toolkit.getToolkit ().getFontLoader ();
+  //  private static final FontLoader fontLoader =
+  //      com.sun.javafx.tk.Toolkit.getToolkit ().getFontLoader ();
   public static final int HOME_VALUE = 0;
   public static final int BAR_VALUE = 25;
 
@@ -359,7 +359,12 @@ public class BackgammonBoard extends Canvas implements Board
     gc.setFont (scoreFont);
 
     double quadrantMidPoint = getWidth () - (3 * pointWidth + border * 2 + homeBoxWidth);
-    float textWidth = fontLoader.computeStringWidth (score, scoreFont);
+
+    //    float textWidth = fontLoader.computeStringWidth (score, scoreFont);
+    final Text text = new Text (score);
+    text.setFont (scoreFont);
+    text.applyCss ();
+    float textWidth = (float) text.getLayoutBounds ().getWidth ();
 
     gc.fillText (score, quadrantMidPoint - textWidth / 2, height / 2 + 10);
   }
